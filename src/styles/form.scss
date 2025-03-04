@@ -1,0 +1,70 @@
+$form-bg: #f9f9f9;
+$input-border: #ccc;
+$input-focus: #007bff;
+$error-color: #ff4d4d;
+$button-bg: #007bff;
+$button-hover: #0056b3;
+
+.form-container {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 20px;
+  background: $form-bg;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  label {
+    font-weight: 600;
+    margin-bottom: 5px;
+    display: block;
+  }
+
+  input,
+  select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid $input-border;
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+    transition: border 0.3s;
+
+    &:focus {
+      border-color: $input-focus;
+    }
+  }
+
+  input[type="color"] {
+    height: 40px;
+    padding: 2px;
+    border: none;
+    cursor: pointer;
+  }
+
+  p {
+    color: $error-color;
+    font-size: 12px;
+    margin-top: 4px;
+  }
+
+  button {
+    background: $button-bg;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+
+    &:hover {
+      background: $button-hover;
+    }
+  }
+}
